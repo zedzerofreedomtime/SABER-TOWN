@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { motion } from "framer-motion";
 import Navbar from "./components/layout/Navbar";
 
 import Home from "./pages/home/Home";
@@ -34,7 +35,12 @@ export default function App() {
       <div className="grid-overlay fixed inset-0 pointer-events-none opacity-40"></div>
       <Navbar />
 
-      <main className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-10">
+      <motion.main
+        className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-10"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
 
@@ -63,7 +69,7 @@ export default function App() {
           <Route path="/council/story" element={<StoryRules />} />
           <Route path="/council/contracts" element={<ContractRules />} />
         </Routes>
-      </main>
+      </motion.main>
     </div>
   );
 }

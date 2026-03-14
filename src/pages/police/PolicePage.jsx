@@ -10,20 +10,8 @@ export default function PolicePage() {
       </div>
 
       <div className="cyber-panel p-5 md:p-6">
-        <SectionHeader
-          title="หมวดกฎตำรวจ"
-          subtitle="รวมกฎพื้นฐานตำรวจ แนวปฏิบัติงาน หมายจับ วินัย และค่าปรับ"
-        />
-
-        <div className="grid gap-4">
-          {policeCategories.map((item, i) => (
-            <CategoryCard
-              key={i}
-              title={item.title}
-              path={item.path}
-            />
-          ))}
-        </div>
+        <SectionHeader title="หมวดกฎตำรวจ" subtitle="รวมกฎพื้นฐานตำรวจ แนวปฏิบัติงาน หมายจับ วินัย และค่าปรับ" />
+        <div className="grid gap-4">{policeCategories.map((item, i) => <CategoryCard key={i} title={item.title} path={item.path} />)}</div>
       </div>
     </section>
   );
