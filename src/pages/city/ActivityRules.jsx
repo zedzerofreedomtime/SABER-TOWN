@@ -4,6 +4,7 @@ import RuleDetailCard from "../../components/ui/RuleDetailCard";
 export default function ActivityRules() {
   const categories = [
     {
+      
       title: "หมวดหมู่: กฎการเล่นแอร์ดรอป",
       rules: [
         {

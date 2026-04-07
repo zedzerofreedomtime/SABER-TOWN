@@ -123,7 +123,9 @@ export default function BasicRules() {
 
       <div className="mt-6 space-y-6">
         <div className="glow-box rounded-2xl p-5">
-          <h3 className="text-xl font-bold text-white">กฎพื้นฐานของเมือง Saber Town</h3>
+          <h3 className="text-xl font-bold text-white">
+            กฎพื้นฐานของเมือง Saber Town
+          </h3>
           <p className="mt-3 leading-7 text-green-100/75">
             กฎพื้นฐานของ Saber Town ถูกจัดทำขึ้นเพื่อให้ผู้เล่นทุกคนสามารถโรลเพลย์ร่วมกันได้อย่างสนุก
             ยุติธรรม และสมจริง หากฝ่าฝืนจะมีบทลงโทษตามที่กำหนด
@@ -138,7 +140,9 @@ export default function BasicRules() {
             ))}
           </ul>
 
-          <h4 className="mt-5 text-lg font-semibold text-cyan-300">หมายเหตุการนับใบ</h4>
+          <h4 className="mt-5 text-lg font-semibold text-cyan-300">
+            หมายเหตุการนับใบ
+          </h4>
           <ul className="mt-3 space-y-2 text-green-100/75">
             {punishmentNotes.map((item, i) => (
               <li key={i}>• {item}</li>
@@ -147,7 +151,9 @@ export default function BasicRules() {
         </div>
 
         <div className="glow-box rounded-2xl p-5">
-          <h3 className="text-xl font-bold text-white">การเทรดของในกรณีถูกลงโทษ</h3>
+          <h3 className="text-xl font-bold text-white">
+            การเทรดของในกรณีถูกลงโทษ
+          </h3>
           <ul className="mt-4 space-y-2 text-green-100/75">
             {tradeRules.map((item, i) => (
               <li key={i}>• {item}</li>
@@ -156,7 +162,9 @@ export default function BasicRules() {
         </div>
 
         <div className="glow-box rounded-2xl p-5">
-          <h3 className="text-xl font-bold text-white">กฎ RolePlay พื้นฐานของเมือง Saber Town</h3>
+          <h3 className="text-xl font-bold text-white">
+            กฎ RolePlay พื้นฐานของเมือง Saber Town
+          </h3>
           <p className="mt-3 leading-7 text-green-100/75">
             RolePlay (RP) คือ การสวมบทบาทเป็นตัวละครในเกม โดยยึดหลักความสมจริงตามชีวิตจริง
             และต้องปฏิบัติตามกฎของเซิร์ฟเวอร์อย่างเคร่งครัด
@@ -164,7 +172,10 @@ export default function BasicRules() {
 
           <div className="mt-4 space-y-3">
             {roleplayBasics.map((item, i) => (
-              <div key={i} className="rounded-xl border border-green-400/20 bg-black/20 p-4">
+              <div
+                key={i}
+                className="rounded-xl border border-green-400/20 bg-black/20 p-4"
+              >
                 <h4 className="font-semibold text-cyan-300">{item.title}</h4>
                 <p className="mt-1 text-green-100/75">{item.description}</p>
               </div>
@@ -193,16 +204,23 @@ export default function BasicRules() {
                 <h4 className="text-lg font-bold text-cyan-300">
                   {i + 1}. {rule.title}
                 </h4>
-                <p className="mt-2 leading-7 text-green-100/75">{rule.description}</p>
+
+                <p className="mt-2 leading-7 text-green-100/75">
+                  {rule.description}
+                </p>
 
                 {rule.extra && (
                   <p className="mt-2 text-yellow-200/90">{rule.extra}</p>
                 )}
 
-                <p className="mt-3 font-semibold text-red-300">{rule.punishment}</p>
+                <p className="mt-3 font-semibold text-red-300">
+                  {rule.punishment}
+                </p>
 
                 {rule.extraPunishment && (
-                  <p className="mt-1 font-semibold text-red-300">{rule.extraPunishment}</p>
+                  <p className="mt-1 font-semibold text-red-300">
+                    {rule.extraPunishment}
+                  </p>
                 )}
               </div>
             ))}

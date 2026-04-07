@@ -12,10 +12,10 @@ export default function CategoryCard({ title, path }) {
     >
       <Link
         to={path}
-        className="group block rounded-2xl border border-green-400/15 bg-[#08110d]/90 px-5 py-5 shadow-[0_0_0_1px_rgba(0,255,136,0.04)] transition duration-300 hover:border-cyan-400/40 hover:shadow-[0_0_20px_rgba(0,255,170,0.15)]"
+        className="group block rounded-2xl border border-green-400/15 bg-[#08110d]/90 px-4 py-4 shadow-[0_0_0_1px_rgba(0,255,136,0.04)] transition duration-300 hover:border-cyan-400/40 hover:shadow-[0_0_20px_rgba(0,255,170,0.15)] sm:px-5 sm:py-5"
       >
         <div className="rounded-xl bg-[linear-gradient(180deg,rgba(0,255,128,0.05),transparent)]">
-          <p className="text-2xl font-extrabold tracking-wide text-white">
+          <p className="text-lg font-extrabold tracking-wide text-white sm:text-xl md:text-2xl">
             {title}
           </p>
         </div>

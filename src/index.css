@@ -49,13 +49,7 @@ body {
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(
-    90deg,
-    #00ff88,
-    #00d5ff,
-    #8bff00,
-    #00ff88
-  );
+  background: linear-gradient(90deg, #00ff88, #00d5ff, #8bff00, #00ff88);
   background-size: 250% 250%;
   animation: rgbMove 5s linear infinite;
   -webkit-mask:
@@ -100,6 +94,72 @@ body {
   pointer-events: none;
 }
 
+.readable-content {
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+.readable-content p {
+  font-size: 0.95rem;
+  color: rgba(236, 255, 244, 0.9);
+}
+
+@media (min-width: 640px) {
+  .readable-content p {
+    font-size: 1rem;
+  }
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 255, 170, 0.14);
+  background: rgba(4, 16, 12, 0.88);
+}
+
+.rule-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.rule-table thead th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #67e8f9;
+  background: rgba(0, 255, 170, 0.08);
+  border-bottom: 1px solid rgba(0, 255, 170, 0.14);
+}
+
+.rule-table tbody td {
+  padding: 16px;
+  vertical-align: top;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba(236, 255, 244, 0.9);
+  border-bottom: 1px solid rgba(0, 255, 170, 0.08);
+}
+
+.rule-table tbody tr:hover {
+  background: rgba(0, 255, 170, 0.03);
+}
+
+.rule-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.6rem;
+  border-radius: 9999px;
+  background: rgba(0, 255, 170, 0.12);
+  color: #67e8f9;
+  font-weight: 800;
+}
+
 @keyframes rgbMove {
   0% {
     background-position: 0% 50%;
@@ -107,48 +167,4 @@ body {
   100% {
     background-position: 300% 50%;
   }
-}
-
-.glow-box {
-  background: linear-gradient(180deg, rgba(5, 20, 15, 0.95), rgba(3, 10, 8, 0.95));
-  border: 1px solid rgba(34, 197, 94, 0.22);
-  box-shadow:
-    inset 0 0 20px rgba(34, 197, 94, 0.05),
-    0 0 18px rgba(34, 197, 94, 0.08);
-}
-
-.glow-box:hover {
-  border-color: rgba(34, 197, 94, 0.45);
-  box-shadow:
-    inset 0 0 20px rgba(34, 197, 94, 0.08),
-    0 0 22px rgba(34, 197, 94, 0.18);
-}
-
-.cyber-noise {
-  position: relative;
-}
-
-.cyber-noise::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0,255,170,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,170,0.03) 1px, transparent 1px);
-  background-size: 22px 22px;
-  pointer-events: none;
-  opacity: 0.35;
-}
-
-.cyber-scan::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0,255,170,0.05) 45%,
-    transparent 100%
-  );
-  pointer-events: none;
 }
